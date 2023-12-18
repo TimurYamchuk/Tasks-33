@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 01</title>
+</head>
+
+<body>
+    <button id="testBtn">Test Button</button>
+    <script>
+        // Способ 1: Используя атрибут HTML
+        document.getElementById('testBtn').onclick = function() {
+            alert('Hello world!');
+        };
+
+        // Способ 2: Используя свойство DOM-элемента
+        const buttonElement = document.getElementById('testBtn');
+        buttonElement.onclick = showMessage;
+
+        function showMessage() {
+            alert('Hello world!');
+        }
+
+        // Способ 3: Используя метод addEventListener
+        const btnElement = document.getElementById('testBtn');
+        btnElement.addEventListener('click', function() {
+            alert('Hello world!');
+        });
+    </script>
+</body>
+
+</html>
